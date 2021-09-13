@@ -1,0 +1,6 @@
+sqlalchemy
+gino
+aiohttp==3.6.2
+aiogram~=2.12
+environs~=8.0.0
+asyncpg
