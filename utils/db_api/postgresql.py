@@ -114,7 +114,7 @@ class Database:
         notify_id BIGINT NULL,
         adress varchar(255) NULL,
         open_close BOOLEAN NOT NULL,
-        TOKEN carchar(255) NOT NULL,
+        TOKEN varchar(255) NOT NULL,
         summ_cash BIGINT NULL,
         wow_cash BIGINT NULL
         );

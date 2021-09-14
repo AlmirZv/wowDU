@@ -41,6 +41,10 @@ class Adminss(db_gino.Model):
     shop_code = Column(db_gino.String)
     notify_id = Column(db_gino.Integer)
     adress = Column(db_gino.String)
+    open_close = Column(db_gino.Boolean)
+    TOKEN = Column(db_gino.String(255))
+    summ_cash = Column(db_gino.String(255))
+    wow_cash = Column(db_gino.String(255))
 
 
 class Basket(db_gino.Model):
