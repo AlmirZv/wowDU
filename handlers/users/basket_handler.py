@@ -185,6 +185,7 @@ async def buy_all_card1(query: types.CallbackQuery, callback_data: dict):
 Заказчик:{user_name} \nID:{user_id}"""
             z[one] += text
             user_id = query.from_user.id
+
             # await dp.bot.send_message(one, z[one], parse_mode="markdown", reply_markup=markup)
             # await query.message.answer(text=x[one])
 
@@ -205,7 +206,7 @@ async def buy_all_card1(query: types.CallbackQuery, callback_data: dict):
                                                   currency='rub',
                                                   prices=[types.LabeledPrice(
                                                       label=shop_name, amount=int(amount[one])*100)],
-                                                  payload=one,
+                                                  payload=one+1,
                                                   start_parameter=12312431421231,
                                                   need_phone_number=True,
                                                   need_shipping_address=True)
@@ -250,6 +251,8 @@ async def got_payment(message: types.Message):
         wow_cash = int(admins_info.get('wow_cash'))
         total_amount = int(message.successful_payment.total_amount)
         wow_cash -= (total_amount/100)
+        if wow_cash < 0:
+            wow_cash = 0
 
         await db.update_wow_cash(id=admin_id, wow_cash=wow_cash)
         text = """Оплата прошла успешно. Комиссия обнулена."""
