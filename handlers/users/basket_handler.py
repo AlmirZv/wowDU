@@ -147,7 +147,7 @@ async def buy_all_card1(query: types.CallbackQuery, callback_data: dict):
             #order_text = "Поступил заказ:"
             # await dp.bot.send_message(notify_id, order_text, parse_mode="markdown")
             z[notify_id] = text
-            z[admin_id] = 1
+            #z[admin_id] = 1
             y.append(notify_id)
             summ_price = item_price*item1.quantity
             # -------------------------------
