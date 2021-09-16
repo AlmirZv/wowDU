@@ -206,7 +206,7 @@ async def buy_all_card1(query: types.CallbackQuery, callback_data: dict):
                                                   currency='rub',
                                                   prices=[types.LabeledPrice(
                                                       label=shop_name, amount=int(amount[one])*100)],
-                                                  payload=one+1,
+                                                  payload=one,
                                                   start_parameter=12312431421231,
                                                   need_phone_number=True,
                                                   need_shipping_address=True)
@@ -220,7 +220,7 @@ async def buy_all_card1(query: types.CallbackQuery, callback_data: dict):
                                               currency='rub',
                                               prices=[types.LabeledPrice(
                                                   label=shop_name, amount=int(amount[one])*100)],
-                                              payload=one+1,
+                                              payload=one,
                                               start_parameter=12312431421231,
                                               need_phone_number=True,
                                               need_shipping_address=True)
